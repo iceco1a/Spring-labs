@@ -14,7 +14,7 @@ mybatis:
 
 # mapper 配置内容
 mapper:
-  mappers: cn.iocoder.springboot.lab12.mybatis.util.BaseMapper # 设置基础 Mapper 接口
+  mappers: cn.iceco1a.util.BaseMapper # 设置基础 Mapper 接口
   not-empty: true # 在 INSERT 和 UPDATE 操作时，是否会判断字段是否为空。即 <if test='xxx != null' />
   identity: MYSQL
 
