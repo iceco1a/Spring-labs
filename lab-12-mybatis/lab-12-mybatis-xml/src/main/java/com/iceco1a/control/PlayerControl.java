@@ -5,6 +5,7 @@ import com.iceco1a.mapper.PlayerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 import java.util.List;
 
 @RestController
@@ -27,6 +28,11 @@ public class PlayerControl {
     @PostMapping("/palyer/post")
     public Integer addPlayer(@RequestBody Player player){
         return playerMapper.addPlayer(player);
+    }
+
+    @PostMapping("/palyer/post/autoGenKey")
+    public Integer addPlayerAutoGenKey(@RequestBody Player player){
+        return playerMapper.addPlayerAutoGenKey(player);
     }
 
     @PutMapping("/player/put/{id}")

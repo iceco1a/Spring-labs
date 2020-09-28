@@ -12,6 +12,7 @@ mybatis:
   config-location: classpath:mybatis-config.xml # 配置 MyBatis 配置文件路径
   mapper-locations: classpath:mapper/*.xml # 配置 Mapper XML 地址
   type-aliases-package: com.iceco1a.bean # 配置数据库实体包路径
-
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 server:
   port: 8080

@@ -22,6 +22,10 @@
         VALUES (#{playerId},#{teamId},#{playerName},#{height})
     </insert>
 
+    <insert id="addPlayerAutoGenKey" parameterType="Player" useGeneratedKeys="true" keyProperty="playerId">
+        INSERT INTO PLAYER(TEAM_ID,PLAYER_NAME,HEIGHT)
+        VALUES (#{teamId},#{playerName},#{height})
+    </insert>
     <update id="updatePlayer">
         update PLAYER
         <set>

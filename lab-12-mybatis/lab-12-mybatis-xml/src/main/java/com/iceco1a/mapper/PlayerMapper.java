@@ -32,4 +32,11 @@ public interface PlayerMapper {
     Integer updatePlayer(@Param("id")Long id, Player player);
 
     Integer delPlayerById(@Param("id")Long id);
+
+    /**
+     * 插入球员，主键自动策略
+     * @param player
+     * @return
+     */
+    Integer addPlayerAutoGenKey(Player player);
 }
